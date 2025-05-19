@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ChhayaShilpo | আমাদের সাজসজ্জার সামগ্রী</title>
+    <link rel="stylesheet" href="{% static 'shinehub/css/style.css' %}">
+</head>
+<body>
+    <h1>🎉 আমাদের পণ্যের তালিকা 🎉</h1>
+    <div class="product-grid">
+        {% for product in products %}
+            <div class="product-card">
+                <img src="{% static product.image %}" alt="{{ product.name }}">
+                <h3>{{ product.name }}</h3>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
